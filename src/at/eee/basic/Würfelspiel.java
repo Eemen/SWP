@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Würfelspiel {
     public static void main(String[] args) {
         int isumme = 0;
+        int isummecon = 0;
         int iRandomvariable;
         System.out.println("*************PRESS ENTERT TO START THE GAME*************");
         Scanner scanner = new Scanner(System.in);
@@ -25,10 +26,18 @@ public class Würfelspiel {
         for (int a = 6; a > 0; a--) {
             iRandomvariable = randomZahlenGen();
             System.out.println("**" + iRandomvariable + "**");
-            isumme += iRandomvariable;
-            System.out.println("is your total number: " + isumme);
+            isummecon += iRandomvariable;
+        }
+        System.out.println("Enemy number is : " + isummecon);
+
+        if (isummecon > isumme) {
+            System.out.println("Your enemy win");
+        } else {
+            System.out.println("Your win");
         }
     }
+
+
     public static int randomZahlenGen() {
         Random random = new Random();
         int randomZahl = random.nextInt(6) +1;
