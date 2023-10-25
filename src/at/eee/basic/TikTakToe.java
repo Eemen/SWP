@@ -22,12 +22,15 @@ public class TikTakToe {
         boolean platzvergeben = false;
         boolean spieler;
         Scanner scanner = new Scanner(System.in);
-        int selection = scanner.nextInt();
+
 
         System.out.println("An welche Feld möchte Spieler 1 sein Feld plazieren.");
-        System.out.println("|1|2|3|\n|4|5|6|\n|7|8|9|");
-        int einzahlungsBetrag = scanner.nextInt();
+        int selection = scanner.nextInt();
         spieler = true;
+        spielfeld(selection,  verfuegbar, spieler);
+        System.out.println("An welche Feld möchte Spieler 2 sein Feld plazieren.");
+        int selection2 = scanner.nextInt();
+        spieler = false;
         spielfeld(selection,  verfuegbar, spieler);
 
     }
@@ -37,7 +40,7 @@ public class TikTakToe {
             welcherspieler = 'X';
         }
         else {
-            welcherspieler = 'Y';
+            welcherspieler = 'O';
         }
         switch(a) {
             case 1:
@@ -67,15 +70,9 @@ public class TikTakToe {
             case 9:
                 array[8] = welcherspieler;
                 break;
-            default:// code block
+            default:
         }
 
         System.out.println("|"+ array[0] + "|" + array[1] + "|" + array[2] + "|" + "\n" + "|" + array[3] +"|" + array[4] + "|" + array[5] + "|" + "\n" + "|" + array[6] + "|" + array[7] + "|" + array[8] + "|" + "\n");
     }
 }
-/*
-for (int i = 0; i < verfuegbar.length; i++) {
-        if (verfuegbar[i] == gesuchterWert) {
-        gefunden = true;
-        break; // Wenn der Wert gefunden wurde, breche die Schleife ab.
-        }*/
