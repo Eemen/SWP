@@ -9,11 +9,11 @@ public class Car {
    private String color;
    public int fuelVolume;
 
-   Car car3 = new Car(int fc, String , String s){
-     this.fuelConsumption
-   }
-   public Car(int fuelConsumption, String brand, String serialNumber){
 
+   public Car(int fuelConsumption, String brand, String serialNumber){
+       this.fuelConsumption = fuelConsumption;
+       this.brand = brand;
+       this.serialNumber = serialNumber;
    }
 
    public void drive(){
