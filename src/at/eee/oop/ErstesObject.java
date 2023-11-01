@@ -20,10 +20,6 @@ public class ErstesObject {
 
 
         */
-        Car c3 = new Car(17, "Opel", "1232U", 50);
-
-        System.out.println(c3.getSerialNumber());
-
         /*
         System.out.println(c1.getFuelAmount());
 
@@ -38,6 +34,11 @@ public class ErstesObject {
         c2.getRemainingRange();
 
          */
+
+
+        Car c1 = new Car("Audi","34SD");
+
+        c1.drive();
     }
 
 
