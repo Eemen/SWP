@@ -2,14 +2,15 @@ package at.eee.oop;
 
 public class ErstesObject {
     public static void main(String[] args) {
-        /*
-        Car c1 = new Car();
-        c1.brand = "Audi";
-        c1.fuelConsumption = 7;
-        c1.serialNumber = "A2345";
-        c1.fuelAmount = 70;
-        c1.fuelVolume = 50;
 
+        Car c1 = new Car();
+        c1.setBrand("Audi");
+        c1.setFuelConsumption(7);
+        c1.setSerialNumber("A2345");
+        c1.setFuelAmount(70);
+        c1.setFuelVolume(50);
+
+        /*
         Car c2 = new Car();
         c2.brand = "Mercedes";
         c2.fuelConsumption = 6;
@@ -17,13 +18,16 @@ public class ErstesObject {
         c2.fuelAmount = 50;
         c2.fuelVolume = 100;
 
-         */
 
-        Car c3 = new Car(17, "Opel", "1232U");
+
+        Car c3 = new Car(17, "Opel", "1232U", 50);
 
         System.out.println(c3.serialNumber);
+
+         */
+        System.out.println(c1.getFuelAmount());
         /*
-        System.out.println(c2.fuelAmount);
+
         c2.drive();
         System.out.println(c2.fuelAmount);
         c2.break_();

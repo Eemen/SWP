@@ -2,19 +2,20 @@ package at.eee.oop;
 
 public class Car {
     // Instanz / Gedächnisvariablen
-   public int fuelConsumption;
-   public int fuelAmount;
-   public String brand;
-   public String serialNumber;
+   private int fuelConsumption;
+   private int fuelAmount;
+   private String brand;
+   private String serialNumber;
    private String color;
-   public int fuelVolume;
+   private int fuelVolume;
 
-
-   public Car(int fuelConsumption, String brand, String serialNumber){
+/*
+   public Car(int fuelConsumption, String brand, String serialNumber, int fuelVolume){
        this.fuelConsumption = fuelConsumption;
        this.brand = brand;
        this.serialNumber = serialNumber;
-   }
+       this.fuelVolume = fuelVolume;
+   }*/
 
    public void drive(){
        this.fuelAmount = this.fuelAmount - fuelConsumption;
@@ -48,5 +49,38 @@ public class Car {
        float d = c/this.fuelConsumption;
        System.out.println("Sie haben noch " + d + "km Reichweite");
    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setFuelAmount(int fuelAmount) {
+       if (fuelAmount>100){
+           this.fuelAmount = 100;
+       }else{
+           this.fuelAmount = fuelAmount;
+       }
+
+    }
+
+    public void setFuelConsumption(int fuelConsumption) {
+        this.fuelConsumption = fuelConsumption;
+    }
+
+    public void setFuelVolume(int fuelVolume) {
+        this.fuelVolume = fuelVolume;
+    }
+
+    public void setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
+    }
+
+    public int getFuelAmount() {
+        return fuelAmount;
+    }
 
 }
