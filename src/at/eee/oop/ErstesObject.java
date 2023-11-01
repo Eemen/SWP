@@ -38,7 +38,8 @@ public class ErstesObject {
 
         Car c1 = new Car("Audi","34SD");
 
-        c1.drive();
+
+        System.out.println(c1.getMirrors().get(0).getPosition());
     }
 
 

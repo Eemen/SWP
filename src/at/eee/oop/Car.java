@@ -1,5 +1,8 @@
 package at.eee.oop;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Car {
     // Instanzvariablen (private)
     private Engine engine;
@@ -10,6 +13,7 @@ public class Car {
     private String serialNumber;
     private String color;
     //private int fuelVolume;
+    private List<RearMirror> mirrors;
 
     // Konstruktor
     public Car(/*int fuelConsumption,*/ String brand, String serialNumber/*, int fuelVolume*/) {
@@ -19,6 +23,13 @@ public class Car {
         //this.fuelVolume = fuelVolume;
         this.engine = new Engine(140, Engine.TYPE.DIESEL, 30, 6);
         Tank t1 = new Tank(50);
+        this.mirrors = new ArrayList<>();
+        RearMirror r1 = new RearMirror(100, 0);
+        RearMirror r2 = new RearMirror(90, -40);
+        this.addMirror(r1);
+        this.addMirror(r2);
+
+
     }
     /*
         public void abfrage(){
@@ -132,6 +143,11 @@ public class Car {
 
      */
 
+    public void addMirror(RearMirror rearMirror){
+        this.mirrors.add(rearMirror);
+    }
 
-
+    public List<RearMirror> getMirrors() {
+        return mirrors;
+    }
 }
