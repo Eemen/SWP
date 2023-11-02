@@ -14,6 +14,7 @@ public class Car {
     private String color;
     //private int fuelVolume;
     private List<RearMirror> mirrors;
+    private List<Tire> tires;
 
     // Konstruktor
     public Car(/*int fuelConsumption,*/ String brand, String serialNumber/*, int fuelVolume*/) {
@@ -22,12 +23,17 @@ public class Car {
         this.serialNumber = serialNumber;
         //this.fuelVolume = fuelVolume;
         this.engine = new Engine(140, Engine.TYPE.DIESEL, 30, 6);
-        Tank t1 = new Tank(50);
+        Tank ta1 = new Tank(50);
         this.mirrors = new ArrayList<>();
         RearMirror r1 = new RearMirror(100, 0);
         RearMirror r2 = new RearMirror(90, -40);
         this.addMirror(r1);
         this.addMirror(r2);
+        this.tires = new ArrayList<>();
+        Tire t1 = new Tire(30, 322, 0);
+        Tire t2 = new Tire(30, 332, 1);
+        Tire t3 = new Tire(30, 342, 2);
+        Tire t4 = new Tire(30, 352, 3);
 
 
     }
@@ -149,5 +155,12 @@ public class Car {
 
     public List<RearMirror> getMirrors() {
         return mirrors;
+    }
+    public void addTires(Tire tire){
+        this.tires.add(tire);
+    }
+
+    public List<Tire> getTires() {
+        return tires;
     }
 }
