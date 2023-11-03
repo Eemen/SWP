@@ -9,7 +9,14 @@ public class Übung {
         l1.addLightElement(e1);
         l1.addLightElement(e2);
 
+        double a = l1.getOverallPowerUsage();
+        System.out.println("Der Gesamtverbrauch ist " + a);
+
         l1.turnOn();
 
+        a = l1.getOverallPowerUsage();
+        System.out.println("Der Gesamtverbrauch ist " + a);
+
+        l1.printNamesOfLightElements();
     }
 }

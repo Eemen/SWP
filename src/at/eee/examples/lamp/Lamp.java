@@ -25,6 +25,25 @@ public class Lamp {
         }
     }
 
+    public double getOverallPowerUsage() {
+        int a = 0;
+        if (elements != null) {
+            for (Element element : elements) {
+                a += element.getPower();
+            }
+        }
+        return a;
+    }
+
+    public void printNamesOfLightElements() {
+        System.out.println("Die Namen aller Lichter sind: ");
+        if (elements != null) {
+            for (Element element : elements) {
+                System.out.println(element.getName());
+            }
+        }
+    }
+
     //getter and setter
 
     public Element getElement() {
