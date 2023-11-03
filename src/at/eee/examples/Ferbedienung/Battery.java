@@ -1,4 +1,4 @@
-package at.eee.oop1;
+package at.eee.examples.Ferbedienung;
 
 public class Battery {
     private int chargelevel;
