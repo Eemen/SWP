@@ -18,5 +18,6 @@ public class Übung {
         System.out.println("Der Gesamtverbrauch ist " + a);
 
         l1.printNamesOfLightElements();
+
     }
 }
