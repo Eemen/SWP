@@ -12,6 +12,7 @@ public class Übung {
         c1.drive20000km();
         Truck t1 = new Truck(e1, p1, "Green", 100, 100000, 10, "Trailer");
         System.out.println(t1.getTrailer() + t1.getColor());
+        t1.drive();
 
     }
 }

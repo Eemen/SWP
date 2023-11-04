@@ -26,6 +26,10 @@ public class Car {
         System.out.println("The dicounted price is: " + c);
     }
 
+    public void drive(){
+        System.out.println("Ich fahre.");
+    }
+
     public void drive20000km(){
         int a = getEngine().getDrivenDistance();
         int b = a + 20000;

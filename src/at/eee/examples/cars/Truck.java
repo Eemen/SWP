@@ -8,6 +8,12 @@ public class Truck extends Car{
         this.trailer = trailer;
     }
 
+    @Override
+    public void drive() {
+        System.out.println("Ich bin ein fahrender Truck");
+        super.drive();
+    }
+
     public String getTrailer() {
         return trailer;
     }
