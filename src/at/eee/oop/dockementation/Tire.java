@@ -1,12 +1,13 @@
-package at.eee.oop;
+package at.eee.oop.dockementation;
 
-public class RearMirror {
+public class Tire {
     private int size;
-    private int position; // 0 neutral, -10 nach links, 10 nach rechts
+    private int id;
+    private int position;
 
-
-    public RearMirror(int size, int position) {
+    public Tire(int size, int id, int position) {
         this.size = size;
+        this.id = id;
         this.position = position;
     }
 
@@ -16,6 +17,14 @@ public class RearMirror {
 
     public void setSize(int size) {
         this.size = size;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getPosition() {

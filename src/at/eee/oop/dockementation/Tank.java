@@ -1,4 +1,4 @@
-package at.eee.oop;
+package at.eee.oop.dockementation;
 
 public class Tank {
     private int tankvolume;

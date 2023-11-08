@@ -1,4 +1,4 @@
-package at.eee.oop;
+package at.eee.oop.dockementation;
 
 public class ErstesObject {
     public static void main(String[] args) {
