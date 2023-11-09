@@ -1,17 +1,17 @@
 package at.eee.examples.rechner;
 
 public class Taste {
-    private int Wert;
+    private double Wert;
 
-    public Taste(int wert) {
+    public Taste(double wert) {
         Wert = wert;
     }
 
-    public int getWert() {
+    public double getWert() {
         return Wert;
     }
 
-    public void setWert(int wert) {
+    public void setWert(double wert) {
         Wert = wert;
     }
 }

@@ -16,6 +16,12 @@ public class TestIT {
         rechner.subtraktion(rechner.getTasten().get(2).getWert(),rechner.getTasten().get(0).getWert());
         rechner.multiplikation(rechner.getTasten().get(0).getWert(),rechner.getTasten().get(2).getWert());
         rechner.division(rechner.getTasten().get(2).getWert(),rechner.getTasten().get(2).getWert());
-
+        rechner.sinusFunktion(rechner.getTasten().get(2).getWert(),rechner.getTasten().get(2).getWert());
+        rechner.togglebwissenschaftsmodus();
+        rechner.sinusFunktion(rechner.getTasten().get(2).getWert(),rechner.getTasten().get(2).getWert());
+        rechner.cosinusFunktion(rechner.getTasten().get(2).getWert(),rechner.getTasten().get(2).getWert());
+        rechner.wurzelFunktion(rechner.getTasten().get(2).getWert());
+        rechner.togglebwurzelrechner();
+        rechner.wurzelFunktion(rechner.getTasten().get(2).getWert());
     }
 }

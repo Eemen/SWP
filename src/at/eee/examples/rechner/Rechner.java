@@ -1,19 +1,17 @@
 package at.eee.examples.rechner;
 
-import at.eee.oop.mitLehrer.Kiste;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Rechner {
     private String sMarke;
-    private int id;
+    private double id;
     private boolean bwissenschaftsmodus = false;
     private boolean bwurzelrechner = false;
     private  List<Taste> tasten;
 
     //Konstrucktor
-    public Rechner(String sMarke, int id) {
+    public Rechner(String sMarke, double id) {
         this.sMarke = sMarke;
         this.id = id;
         this.tasten = new ArrayList<>();
@@ -21,23 +19,23 @@ public class Rechner {
     }
 
     //Funktionen
-    public void addition(int a, int b){
-       int c = a + b;
+    public void addition(double a, double b){
+        double c = a + b;
         System.out.println("Solution addition: " + c);
     }
 
-    public void subtraktion(int a, int b){
-        int c = a - b;
+    public void subtraktion(double a, double b){
+        double c = a - b;
         System.out.println("Solution subtraktion: " + c);
     }
 
-    public void multiplikation(int a, int b){
-        int c = a * b;
+    public void multiplikation(double a, double b){
+        double c = a * b;
         System.out.println("Solution multiplikation: " + c);
     }
 
-    public void division(int a, int b){
-        int c = a / b;
+    public void division(double a, double b){
+        double c = a / b;
         System.out.println("Solution division: " + c);
     }
 
@@ -49,7 +47,32 @@ public class Rechner {
         bwurzelrechner =! bwurzelrechner;
     }
 
-    public void 
+    public void sinusFunktion(double a, double b){
+        if (bwissenschaftsmodus) {
+            double sinusWert = Math.sin(a / b);
+            System.out.println("Your sinus is: " + sinusWert);
+        }else {
+            System.out.println("Please turn on the science mode");
+        }
+    }
+    public void cosinusFunktion(double a, double b){
+        if (bwissenschaftsmodus) {
+            double cosinusWert = Math.cos(a / b);
+            System.out.println("Your cosinus is: " + cosinusWert);
+        }else {
+            System.out.println("Please turn on the science mode");
+        }
+    }
+
+    public void wurzelFunktion(double a){
+        if (bwurzelrechner) {
+            double wurzelWert = Math.sqrt(a);
+            System.out.println("Your square route is: " + wurzelWert);
+        }else {
+            System.out.println("Please turn on the square route mode");
+        }
+    }
+
 
     public void addTasten(Taste taste){
         this.tasten.add(taste);
@@ -64,11 +87,11 @@ public class Rechner {
         this.sMarke = sMarke;
     }
 
-    public int getId() {
+    public double getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(double id) {
         this.id = id;
     }
 
