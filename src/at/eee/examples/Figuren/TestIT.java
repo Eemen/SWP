@@ -10,5 +10,6 @@ public class TestIT {
         k1.getArea(k1.getType());
         v1.getArea(v1.getType());
         q1.getArea(q1.getType());
+        w1.getArea(w1.getType());
     }
 }

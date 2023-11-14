@@ -36,7 +36,8 @@ public class Figure {
                 break;
             case "würfel":
                 b = this.getA();
-                c = (b * b)
+                c = (b * b) * 6;
+                System.out.println("Der Flächeninhalt des Würfles ist: " + c);
         }
     }
 
