@@ -3,10 +3,12 @@ package at.eee.examples.bank;
 public class CreditAccount {
     private int id;
     private double value;
+    private double limit;
 
-    public CreditAccount(int id, double value) {
+    public CreditAccount(int id, double value, double limit) {
         this.id = id;
         this.value = value;
+        this.limit = limit;
     }
 
     public int getId() {
@@ -23,5 +25,13 @@ public class CreditAccount {
 
     public void setValue(double value) {
         this.value = value;
+    }
+
+    public double getLimit() {
+        return limit;
+    }
+
+    public void setLimit(double limit) {
+        this.limit = limit;
     }
 }

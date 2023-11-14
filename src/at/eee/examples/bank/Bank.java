@@ -39,10 +39,57 @@ public class Bank {
                 }
                 break;
             case "creditAccount":
-                double creditAccount = getCreditAccount().getValue();
+                double creditAccountValue = getCreditAccount().getValue();
+                double creditAccountLimit = getCreditAccount().getLimit();
+                x = creditAccountValue - betrag;
+                if (x > creditAccountLimit){
+                    System.out.println("Du hast " + betrag + " mehr Kredit abgehoben");
+                    getCreditAccount().setValue(x);
+                }else {
+                    System.out.println("Das würde dein Limit überstreiten");
+                }
+
+
                 break;
             default:
                 System.out.println("Geben Sie ein gültiges Konto an");
+        }
+    }
+
+    public void payin(String a, double betrag){
+        switch (a){
+            case "savingsAccount":
+                double x = getSavingsAccount().getValue() + betrag;
+                System.out.println("Sie haben: " + betrag + " eingezahlt");
+                getSavingsAccount().setValue(x);
+                break;
+            case "checkingsAccount":
+                x = getCheckingsAccount().getValue() + betrag;
+                System.out.println("Sie haben: " + betrag + " eingezahlt");
+                getCheckingsAccount().setValue(x);
+                break;
+            case "creditAccount":
+                x = getCreditAccount().getValue() + betrag;
+                if (x < 0){
+                    System.out.println("Sie haben " + betrag + " eingezahlt");
+                    getCreditAccount().setValue(x);
+                }else {
+                    System.out.println("Sie können nicht so viel Geld Einzahlen, da sie nicht so viele Schulden haben");
+                }
+                break;
+        }
+    }
+
+    public void getSaldo(String a){
+        switch (a){
+            case "savingsAccount":
+                System.out.println("Sie haben " + getSavingsAccount().getValue() + " auf dem Konto");
+                break;
+            case "checkingsAccount":
+                System.out.println("Sie haben " + getCheckingsAccount().getValue() + " auf dem Konto");
+                break;
+            case "creditAccount":
+                System.out.println("Sie haben " + getCreditAccount().getValue() + " auf dem Konto");
         }
     }
 
