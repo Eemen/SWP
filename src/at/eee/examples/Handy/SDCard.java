@@ -21,9 +21,13 @@ public class SDCard {
     public void saveFile(PhoneFile phoneFile){
         int freeSpace = getFreeSpace();
         int spaceCosume = this.camera.getResolution();
-        int a = freeSpace
-        if ()
-        System.out.println(spaceCosume);
+        if (freeSpace < spaceCosume){
+            addFile(phoneFile);
+        }else {
+            System.out.println("Sie haben zu wenig Speicherplatz");
+        }
+
+
     }
 
     public int getFreeSpace(){

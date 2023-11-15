@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
 
         SIM sim1 = new SIM(1, "+43356746454");
-        Camera camera1 = new Camera(10);
         SDCard sdCard1 = new SDCard(100);
+        Camera camera1 = new Camera(10, sdCard1);
         PhoneFile phoneFile1 = new PhoneFile(1, 10, "Blume");
         PhoneFile phoneFile2 = new PhoneFile(2, 15, "Hase");
         sdCard1.addFile(phoneFile1);

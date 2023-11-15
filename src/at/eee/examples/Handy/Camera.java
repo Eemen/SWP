@@ -4,8 +4,9 @@ public class Camera {
     private int resolution;
     private SDCard sdCard;
 
-    public Camera(int resolution) {
+    public Camera(int resolution, SDCard sdCard) {
         this.resolution = resolution;
+        this.sdCard = sdCard;
     }
 
     //Funktionen
