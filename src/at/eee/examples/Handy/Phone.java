@@ -14,7 +14,7 @@ public class Phone {
     }
 
     public void takePicture(int bild){
-        saveFile(bild);
+        camera.makePicture(3, "Kabel");
     }
 
     //makeCall
