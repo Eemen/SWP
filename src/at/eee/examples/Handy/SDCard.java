@@ -18,16 +18,15 @@ public class SDCard {
 
     //Funktionen
 
-    public void saveFile(PhoneFile phoneFile){
+    public void saveFile(){
         int freeSpace = getFreeSpace();
-        int spaceCosume = this.camera.getResolution();
-        if (freeSpace < spaceCosume){
+        int spaceConsume = getCamera().getResolution();
+        if (freeSpace > spaceConsume){
             addFile(phoneFile);
+            System.out.println("Es wurde erfolgreich gespeichert");
         }else {
             System.out.println("Sie haben zu wenig Speicherplatz");
         }
-
-
     }
 
     public int getFreeSpace(){
@@ -38,6 +37,10 @@ public class SDCard {
         }
         b = this.capacity - a;
         return b;
+    }
+
+    public void getAllFiles(){
+        System.out.println(P);
     }
 
     public void addFile(PhoneFile file){
@@ -68,5 +71,13 @@ public class SDCard {
 
     public void setPhoneFile(PhoneFile phoneFile) {
         this.phoneFile = phoneFile;
+    }
+
+    public Camera getCamera() {
+        return camera;
+    }
+
+    public void setCamera(Camera camera) {
+        this.camera = camera;
     }
 }

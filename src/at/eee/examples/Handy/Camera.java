@@ -13,7 +13,8 @@ public class Camera {
 
     public void makePicture(int extension, String name){
         PhoneFile phoneFile = new PhoneFile(extension, this.resolution, name);
-        sdCard.saveFile(phoneFile);
+        sdCard.setPhoneFile(phoneFile);
+        sdCard.saveFile();
     }
 
     public int getResolution() {

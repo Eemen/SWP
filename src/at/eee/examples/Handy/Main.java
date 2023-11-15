@@ -11,6 +11,7 @@ public class Main {
         sdCard1.addFile(phoneFile1);
         sdCard1.addFile(phoneFile2);
         Phone memetsphone = new Phone(camera1, sim1, sdCard1, "blue");
+        sdCard1.setCamera(camera1);
 
         memetsphone.takePicture(2232);
     }
