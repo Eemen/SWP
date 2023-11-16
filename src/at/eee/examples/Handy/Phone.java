@@ -1,5 +1,8 @@
 package at.eee.examples.Handy;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Phone {
     private Camera camera;
     private SIM sim;
@@ -15,6 +18,13 @@ public class Phone {
 
     public void takePicture(int bild){
         camera.makePicture(3, "Kabel");
+    }
+
+    public void getFiles() {
+        List<PhoneFile> filesList = sdCard.getAllFiles();
+        for (PhoneFile file : filesList) {
+            System.out.println("Name: " + file.getName());
+        }
     }
 
     //makeCall

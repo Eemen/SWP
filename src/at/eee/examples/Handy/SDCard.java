@@ -39,8 +39,8 @@ public class SDCard {
         return b;
     }
 
-    public void getAllFiles(){
-        System.out.println(P);
+    public List<PhoneFile> getAllFiles() {
+        return new ArrayList<>(files);
     }
 
     public void addFile(PhoneFile file){

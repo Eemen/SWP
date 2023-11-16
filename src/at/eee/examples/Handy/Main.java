@@ -14,5 +14,6 @@ public class Main {
         sdCard1.setCamera(camera1);
 
         memetsphone.takePicture(2232);
+        memetsphone.getFiles();
     }
 }
