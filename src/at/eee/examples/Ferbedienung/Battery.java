@@ -13,6 +13,10 @@ public class Battery {
         System.out.println("Kein Verbraucher angleschlossen");
     }
 
+    public int chargingStatus(){
+        return chargelevel;
+    }
+
     //getter und Setter
     public int getChargelevel() {
         return chargelevel;

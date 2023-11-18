@@ -22,8 +22,8 @@ public class Remote {
     }
 
     public void getStatus(){
-        int a = this.getBatteries().get(0).getChargelevel();
-        int b = this.getBatteries().get(1).getChargelevel();
+        int a = this.getBatteries().get(0).chargingStatus();
+        int b = this.getBatteries().get(1).chargingStatus();
         int c = (a + b) / 2;
         System.out.println("average charging level: " + c);
     }
