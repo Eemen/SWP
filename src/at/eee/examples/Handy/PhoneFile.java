@@ -15,6 +15,10 @@ public class PhoneFile {
 
     //Funktionen
 
+    public String getInfo() {
+        return "Name: " + this.name + ", Size: " + this.size;
+    }
+
     //getter & setter
 
     public int getExtension() {

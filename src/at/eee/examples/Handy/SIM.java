@@ -13,8 +13,9 @@ public class SIM {
 
     //Funktionen
 
-    //sim(id numbers)
-    //doCell(String)
+    public void doCall(String number){
+        System.out.println(number + " wird angerufen");
+    }
 
     //getter & setter
 

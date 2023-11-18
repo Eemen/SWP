@@ -13,7 +13,9 @@ public class Main {
         Phone memetsphone = new Phone(camera1, sim1, sdCard1, "blue");
         sdCard1.setCamera(camera1);
 
-        memetsphone.takePicture(2232);
-        memetsphone.getFiles();
+        memetsphone.takePicture(3, "Flugzeug");
+        memetsphone.printAllFiles();
+        memetsphone.makeCall("+43 0066 34324 ");
+        memetsphone.getFreeSpace();
     }
 }

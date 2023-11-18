@@ -16,22 +16,25 @@ public class Phone {
         this.color = color;
     }
 
-    public void takePicture(int bild){
-        camera.makePicture(3, "Kabel");
+    public void takePicture(int extension, String name){
+        camera.makePicture(extension, name);
     }
 
-    public void getFiles() {
+    public void printAllFiles() {
         List<PhoneFile> filesList = sdCard.getAllFiles();
         for (PhoneFile file : filesList) {
-            System.out.println("Name: " + file.getName());
+            System.out.println(file.getInfo());
         }
     }
 
-    //makeCall
+    public void makeCall(String number){
+        sim.doCall(number);
+    }
 
-    //getFreeSpace
-
-    //printAllFiles
+    public int getFreeSpace(){
+        System.out.println("Sie haben " + sdCard.getFreeSpace() + " MB frei");
+        return sdCard.getFreeSpace();
+    }
 
     public Camera getCamera() {
         return camera;
