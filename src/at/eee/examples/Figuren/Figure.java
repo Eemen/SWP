@@ -41,6 +41,10 @@ public class Figure {
         }
     }
 
+    public void getTheName(){
+        System.out.println("Der Name der Figur ist " + this.getName());
+    }
+
     //getter and setter
     public String getName() {
         return Name;
