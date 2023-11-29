@@ -1,7 +1,8 @@
 package at.eee.examples.Handy;
 
-public class Main {
+public class TestIt {
     public static void main(String[] args) {
+
 
         SIM sim1 = new SIM(1, "+43356746454");
         SDCard sdCard1 = new SDCard(100);
@@ -10,12 +11,12 @@ public class Main {
         PhoneFile phoneFile2 = new PhoneFile(2, 15, "Hase");
         sdCard1.addFile(phoneFile1);
         sdCard1.addFile(phoneFile2);
-        Phone memetsphone = new Phone(camera1, sim1, sdCard1, "blue");
+        Phone phone = new Phone(camera1, sim1, sdCard1, "blue");
         sdCard1.setCamera(camera1);
 
-        memetsphone.takePicture(3, "Flugzeug");
-        memetsphone.printAllFiles();
-        memetsphone.makeCall("+43 0066 34324 ");
-        memetsphone.getFreeSpace();
+        phone.takePicture(3, "Flugzeug");
+        phone.printAllFiles();
+        phone.makeCall("+43 0066 34324 ");
+        phone.getFreeSpace();
     }
 }
